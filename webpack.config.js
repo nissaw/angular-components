@@ -14,6 +14,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.html$/, loader: 'raw' },
+  // stylus compiles to css, css fetches all urls- normalizes the paths of urls, style puts in in the head.
       { test: /\.styl$/, loader: 'style!css!stylus' },
       { test: /\.css/, loader: 'style!css' },
       { test: /\.js$/, loader: 'babel?stage=1', exclude: [/client\/lib/, /node_modules/, /\.spec\.js/] }
