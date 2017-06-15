@@ -13,7 +13,7 @@ module.exports = function(config) {
     frameworks: ['mocha', 'chai'],
 
 
-    // list of files / patterns to load in the browser
+    // list of files / patterns to load in the browser // with webpack this in now just a single file
     files: [
         { /*'change to the spec bundle',*/ watched: false }
     ],
@@ -23,7 +23,7 @@ module.exports = function(config) {
     exclude: [
     ],
 
-
+    /* what should karma do with matching files before moving on */
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     // use webpack and sourcemaps to preprocess the spec bundle file

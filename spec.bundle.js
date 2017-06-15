@@ -22,8 +22,13 @@ import mocks from 'angular-mocks';
 // any file that ends with spec.js and get its path. By passing in true
 // we say do this recursively
 let context = require.context('./client/app', true, /\.spec\.js/);
+/* webpack provides the context method on require.
+look recursively inside ./client/app and find every file that ends with spec.js
+return a function object with multiple methods
 
-// get all the files, for each file, call the context function
-// that will require the file and load it up here. Context will
-// loop and require those spec files here
+get all the files, for each file, call the context function
+that will require the file and load it up here. Context will
+loop and require those spec files here */
 context.keys().forEach(context);
+// array of all the spec files
+// this function says - loop through the context and load up all the spec files, as if you required them individually)
