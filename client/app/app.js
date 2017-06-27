@@ -22,8 +22,11 @@ import {home} from './components/home/home';
 import {blog} from './components/blog/blog';
 // TODO: register common with app
 // TODO: register shared with app
+import {common} from './components/common/common';
+import {shared} from './shared/shared';
 
 angular.module('app', [
+  // these have to be strings
   uiRouter,
   ngAnimate,
   // home is the module, the angular module
@@ -32,6 +35,8 @@ angular.module('app', [
   // property who's value is the name you set the
   // module to be
   home.name,
-  blog.name
+  blog.name,
+  common.name,
+  shared.name
 ])
 .directive('app', appDirective);
